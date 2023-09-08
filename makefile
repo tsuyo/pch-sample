@@ -34,8 +34,8 @@ $(OBJS) myapp
 myapp.obj  : myapp.cpp $(UNSTABLEHDRS)  stable.pch
     $(CPP) $(CLFLAGS) /Yu$(BOUNDRY)    myapp.cpp
 # Compile applib
-applib.obj : applib.cpp $(UNSTABLEHDRS) stable.pch
-    $(CPP) $(CLFLAGS) /Yu$(BOUNDRY)    applib.cpp
+# applib.obj : applib.cpp $(UNSTABLEHDRS) stable.pch
+#     $(CPP) $(CLFLAGS) /Yu$(BOUNDRY)    applib.cpp
 # Compile headers
 stable.pch : $(STABLEHDRS)
-    $(CPP) $(CLFLAGS) /Yc$(BOUNDRY)    applib.cpp myapp.cpp
+    $(CPP) $(CLFLAGS) /Yc$(BOUNDRY)    applib.cpp
