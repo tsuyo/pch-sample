@@ -28,7 +28,7 @@ LIBS      = slibce
 !ENDIF
 myapp.exe: $(OBJS)
     link $(LINKFLAGS) @<<
-$(OBJS), myapp, NUL, $(LIBS), NUL;
+$(OBJS) myapp
 <<
 # Compile myapp
 myapp.obj  : myapp.cpp $(UNSTABLEHDRS)  stable.pch
